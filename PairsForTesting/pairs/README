@@ -1,0 +1,149 @@
+==================================================================================================================================================
+Cause-effect is a growing database with two-variable cause-effect pairs 
+created at Max-Planck-Institute for Biological Cybernetics in Tuebingen, Germany.
+==================================================================================================================================================
+
+Some pairs are highdimensional, for machine readability the relevant information about this is coded in Meta-data.
+
+Meta-data contains the following information:
+
+number of pair | 1st column of cause | last column of cause | 1st column of effect | last column of effect | dataset weight
+
+The dataset weight should be used for calculating average performance of causal inference methods
+to avoid a bias introduced by having multiple copies of essentially the same data (for example,
+the pairs 56-63).
+
+NOTE: pair0001 - pair0041 are taken from the UCI Machine Learning Repository:
+
+Asuncion, A. & Newman, D.J. (2007). UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html]. Irvine, CA: University of California, School of Information and Computer Science. 
+
+==================================================================================================================================================
+Overview over all data pairs.
+
+			var 1				var 2					dataset		ground truth
+
+pair0001		Altitude			Temperature				DWD		->
+pair0002		Altitude			Precipitation				DWD		->
+pair0003		Longitude			Temperature				DWD		->
+pair0004		Altitude			Sunshine				DWD		->
+
+pair0005		Age (Rings)			Length					Abalone		->
+pair0006		Age (Rings)			Shell weight				Abalone		->
+pair0007		Age (Rings)			Diameter				Abalone		->
+pair0008		Age (Rings) 			height					Abalone		->
+pair0009		Age (Rings) 			whole weight				Abalone		->
+pair0010		Age (Rings) 			shucked weight				Abalone		->
+pair0011		Age (Rings) 			viscera weight				Abalone		->
+
+pair0012		Age				Wage per hour				census income	->
+
+pair0013		displacement			mpg					auto-mpg	->
+pair0014		horse power			mpg					auto-mpg	->
+pair0015		weight				mpg					auto-mpg	->
+pair0016		horsepower			acceleration				auto-mpg	->
+
+pair0017		Age				stock dividend				census income	->
+
+pair0018		age				conc. GAG				GAGurine (from R package MASS)	->
+
+pair0019		duration			interval				geyser		->
+
+pair0020		latitude			temperature				DWD		->
+pair0021		longitude			precipitation				DWD		->
+
+pair0022		age				height					arrhythmia	->
+pair0023		age				weight					arrhythmia	->
+pair0024		age				heartbeatrate				arrhythmia	->
+
+pair0025		cement				compressive strength			concrete_data	->
+pair0026		blast furnace slag		compressive strength			concrete_data	->
+pair0027		fly ash				compressive strength			concrete_data	->
+pair0028		water				compressive strength			concrete_data	->
+pair0029		superplasticizer		compressive strength			concrete_data	->
+pair0030		coarse aggregate		compressive strength			concrete_data	->
+pair0031		fine aggregate			compressive strength			concrete_data	->
+pair0032		age				compressive strength			concrete_data	->
+
+pair0033		daily alcohol consumption	mcv mean corpuscular volume 		liver disorders		->
+pair0034		daily alcohol consumption	alkphos alkaline phosphotase 		liver disorders		->
+pair0035		daily alcohol consumption	sgpt alanine aminotransferase		liver disorders		->
+pair0036		daily alcohol consumption	sgot aspartate aminotransferase		liver disorders		->
+pair0037		daily alcohol consumption	gammagt gamma-glutamyl transpeptdase 	liver disorders		->
+
+pair0038		age				body mass index				pima indian diabetes	->
+pair0039		age				2-hour serum insulin			pima indian diabetes	->
+pair0040		age				diastolic blood pressure		pima indian diabetes	->
+pair0041		age				plasma glucose concentration a 2 hrs	pima indian diabetes	->
+
+pair0042		day				temperature				B.Janzing	->
+
+pair0043		temperature			temperature				ncep-ncar	->		
+pair0044		pressure			pressure				ncep-ncar	->		
+pair0045		sea level pressure		sea level pressure			ncep-ncar	->		
+pair0046		relative humidity		relative humidity			ncep-ncar	->		
+
+pair0047		#cars/24h			specific days				traffic		<-
+
+pair0048		inside temperature		outside temperature			Hipel & Mcleod	<-
+
+pair0049		ozone				temperature				Bafu		<-
+pair0050		ozone				temperature				Bafu		<-
+pair0051		ozone				temperature				Bafu		<-
+
+pair0052		(temp, press, slp, rh)		(temp, press, slp, rh)			ncep-ncar	<-
+
+pair0053		ozone concentration		(wind speed, global rad., temp.)	environmental	<-
+
+pair0054		(displacement,horsepower,weight)(mpg, acceleration)			auto-mpg	->
+
+pair0055		16 * ozone 			16 * radiation				Bafu		<-
+
+pair0056		life expectancy, f, 2000-2005   latitude                                UNdata          <-
+pair0057		life expectancy, f, 1995-2000   latitude                                UNdata          <-
+pair0058		life expectancy, f, 1990-1995   latitude                                UNdata          <-
+pair0059		life expectancy, f, 1985-1990   latitude                                UNdata          <-
+pair0060		life expectancy, m, 2000-2005   latitude                                UNdata          <-
+pair0061		life expectancy, m, 1995-2000   latitude                                UNdata          <-
+pair0062		life expectancy, m, 1990-1995   latitude                                UNdata          <-
+pair0063		life expectancy, m, 1985-1990   latitude                                UNdata          <-
+
+pair0064		drinking water access		infant mortality rate			UNdata		->
+
+pair0065		stock return of Hang Seng Bank	stock return of HSBC Hldgs		Yahoo database	->
+pair0066		stock return of Hutchison	stock return of Cheung kong		Yahoo database	->
+pair0067		stock return of Cheung kong 	stock return of Sun Hung Kai Prop.	Yahoo database	->
+
+pair0068		bytes sent 			open http connections 			P. Stark & Janzing	<-
+
+pair0069		inside room temperature		outside temperature			J.M. Mooij	<-
+
+pair0070		parameter			sex					Armann & Buelthoff	->
+
+pair0071		6 symptoms			2 deseases				Acute Inflammations 	->
+
+pair0072		sunspot area			global mean temperature			sunspot data	->
+
+pair0073		co2 emissions			energy use				UNdata		<-
+pair0074		GNI per capita			life expectancy at birth		UNdata		->
+pair0075		under 5 mortality rate		GNI per capita				UNdata		<-
+pair0076                change of population            change of total dietary consumption     Food and Agriculture Organization of the United Nations    ->     
+
+pair0077                temperature                     global radiation                        B. Janzing       <-                                      
+
+pair0078		PPFD (total Photosynthetic Photon Flux Density)	NEP (Net Ecosystem Productivity)			Moffat A.M.	->
+pair0079		NEP (Net Ecosystem Productivity)		PPFDdif (diffuse Photosynthetic Photon Flux Density)	Moffat A.M.	<-
+pair0080		NEP (Net Ecosystem Productivity)		PPFDdir (direct Photosynthetic Photon Flux Density)	Moffat A.M.	<-
+
+pair0081		temperature 			CO2 flux at night at site BE-Bra	Mahecha, M.	->
+pair0082		temperature 			CO2 flux at night at site DE-Har	Mahecha, M.	->
+pair0083		temperature 			CO2 flux at night at site US-PFa	Mahecha, M.	->
+
+pair0084		log of employment		log of population			http://www.spatial-econometrics.com		<-
+
+pair0085		time of measurement		protein content of milk			http://www.maths.lancs.ac.uk/Software/Oswald/	->
+
+pair0086		size of apartment/room		monthly rent in EUR			J.M. Mooij					->
+
+pair0087		daily mean temperature		daily snowfall at Whistler		http://www.mldata.org/repository/data/viewslug/whistler-daily-snowfall/		->
+
+pair0088		age				Relative Spinal bone mineral density	"bone" dataset of R ElemStatLearn package	->
