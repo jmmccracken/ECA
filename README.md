@@ -1,7 +1,7 @@
 Exploratory Causal Analysis (ECA)
 ===
 
-The collection of code is used to perform exploratory causal analysis with bivariate times series data.  The main script is the MATLAB script _ECA_ which is run as
+This collection of code is used to perform exploratory causal analysis with bivariate times series data.  The main script is the MATLAB script _ECA_ which is run as
 
     [TE,GC,PAI,L,LCC,g] = ECA(x,y,xtol,ytol,lags,E,tau,verb,skipGC)
     
@@ -13,9 +13,9 @@ _GC_ is an output struct containing the Granger log-likelihood statistic calcula
 
 _PAI_, _L_, and _LCC_ are output structs containing the PAI, leaning, and lagged cross-correlation calculations, respectively.  The output vector _g_ is the ECA summary vector described in [1].
 
-The script _DMIninoExample_ produces two example ECA summary vectors using IOD and El Nino index data, and the script _WhistlerDailySnowfallExample\_plotting_ produces an ECA summary vector, along with several data plots, for snowfall data.  All the data files have individual README files that provide breif descriptions and sources.
+The script _DMIninoExample_ produces two example ECA summary vectors using IOD and El Nino index data, and the script _WhistlerDailySnowfallExample\_plotting_ produces an ECA summary vector, along with several data plots, for snowfall data.  All the data files have individual README files that provide brief descriptions and sources.
 
-The scripts use the many internal MATLAB functions and have not been tested on any open source MATLAB equivalents such as Octave or Scilab.  The PAI binary called by _ECA_ may need to be recomplied, which can be done following the instructions presented at https://github.com/jmmccracken/PAI.
+The scripts use the many internal MATLAB functions and have not been tested on any open source MATLAB equivalents such as Octave or Scilab.  The PAI binary called by _ECA_ may need to be recomplied, which can be done following the instructions at https://github.com/jmmccracken/PAI.
 
 This code has been tested on Ubuntu 13.10 with kernel version 3.13.0-68-generic x86_64 x86_64 x86_64 GNU/Linux with Matlab 7.9.1.671 (R2009b) Service Pack 1 64-bit (glnxa64).
 
