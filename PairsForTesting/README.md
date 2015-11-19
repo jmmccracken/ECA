@@ -1,0 +1,1 @@
+This data is explained in more detailed in the readme.txt in the data directory.  The data pairs (and the zip file) are available from the UCI Machine Learning Repository, http://webdav.tuebingen.mpg.de/cause-effect/ .
