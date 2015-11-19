@@ -157,16 +157,18 @@ CCommandString = sprintf('./%s/PAI -E %i -t %i -Ey 1 -ty 1 -L %i -f %s -n %i -o 
                               exec_dir,E,tau,length(x),CinputfilenameXY,1,...
                               CoutputfilenameXY);
 [PAI.status,PAI.cmdout] = system(CCommandString);
-RMCommandString = sprintf('rm %s',CinputfilenameXY);
-system(RMCommandString);
+% RMCommandString = sprintf('rm %s',CinputfilenameXY);
+% system(RMCommandString);
+delete(CinputfilenameXY);
 
 % read the output file from the C codeand delete it        
 tic;
 fileID = fopen(CoutputfilenameXY,'r');
 PAI.paiout = fscanf(fileID,'%f,%f,%f,%f');
 fclose(fileID);
-RMCommandString = sprintf('rm %s',CoutputfilenameXY);
-system(RMCommandString);
+% RMCommandString = sprintf('rm %s',CoutputfilenameXY);
+% system(RMCommandString);
+delete(CoutputfilenameXY);
 
 % report PAI
 PAI.diff = PAI.paiout(4,1)-PAI.paiout(2,1);
