@@ -19,4 +19,16 @@ The scripts use the many internal MATLAB functions and have not been tested on a
 
 This code has been tested on Ubuntu 13.10 with kernel version 3.13.0-68-generic x86_64 x86_64 x86_64 GNU/Linux with Matlab 7.9.1.671 (R2009b) Service Pack 1 64-bit (glnxa64).
 
+Test by executing `DMIninoExample` and `WhistlerDailySnowfallExample_plotting`
+
+You may need to compile PAI
+```
+git clone https://github.com/jmmccracken/PAI.git
+cd PAI
+make
+cp PAI ../ECA/pai_exec
+```
+
+(If PAI call fails, see note in ECA.m about library linking.)
+
 [1] reference pending

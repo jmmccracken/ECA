@@ -157,6 +157,18 @@ CCommandString = sprintf('./%s/PAI -E %i -t %i -Ey 1 -ty 1 -L %i -f %s -n %i -o 
                               exec_dir,E,tau,length(x),CinputfilenameXY,1,...
                               CoutputfilenameXY);
 [PAI.status,PAI.cmdout] = system(CCommandString);
+if (length(PAI.cmdout) > 0)
+    % Usually an issue with GNU libraries MATLAB uses in LD_LIBRARY_PATH
+    % See system('env')
+    PAI.cmdout
+    % May need to symlink
+    % /lib/x86_64-linux-gnu/libgcc_s.so.1
+    % and
+    % /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    % with system versions
+    % into (and replace ones distributed by MATLAB)
+    % /usr/local/MATLAB/R2015a/sys/os/glnxa64/
+end
 % RMCommandString = sprintf('rm %s',CinputfilenameXY);
 % system(RMCommandString);
 delete(CinputfilenameXY);
@@ -167,7 +179,6 @@ fileID = fopen(CoutputfilenameXY,'r');
 PAI.paiout = fscanf(fileID,'%f,%f,%f,%f');
 fclose(fileID);
 % RMCommandString = sprintf('rm %s',CoutputfilenameXY);
-% system(RMCommandString);
 delete(CoutputfilenameXY);
 
 % report PAI

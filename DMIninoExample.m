@@ -4,9 +4,6 @@
 [t_nino3,nino3] = Nino3Index();
 [t_nino4,nino4] = Nino4Index();
 
-% set liblength for plotting
-liblength = length(t_DMI);
-
 % subset the NINO data
 NINO3_startidx = (t_DMI(1,1)-t_nino3(1,1))*12+1;
 NINO3_stopidx = NINO3_startidx+length(t_DMI)-1;
