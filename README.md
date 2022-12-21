@@ -1,6 +1,8 @@
 Exploratory Causal Analysis (ECA)
 ===
 
+> :warning: **This code should be considered a research resource. This repo is not actively maintained.** 
+
 This collection of code is used to perform exploratory causal analysis with bivariate times series data.  The main script is the MATLAB script _ECA_ which is run as
 
     [TE,GC,PAI,L,LCC,g] = ECA(x,y,xtol,ytol,lags,E,tau,verb,skipGC)
@@ -31,4 +33,4 @@ cp PAI ../ECA/pai_exec
 
 (If PAI call fails, see note in ECA.m about library linking.)
 
-[1] reference pending
+[1] McCracken, J.M. (2016). Exploratory Causal Analysis. In: Exploratory Causal Analysis with Time Series Data. Synthesis Lectures on Data Mining and Knowledge Discovery. Springer, Cham. https://doi.org/10.1007/978-3-031-01909-8_4
